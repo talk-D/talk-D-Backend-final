@@ -1,0 +1,23 @@
+# 서버 포트 설정
+server:
+  port: 8082
+
+#application-private.yml import
+spring:
+  profiles:
+    include: private
+  devtools:
+    restart:
+      enabled: true
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:1234@talkd.hufni1g.mongodb.net/talkd_db?retryWrites=true&w=majority
+
+  cloud:
+      gcp:
+          storage:
+            credentials:
+              location: src/main/resources/talkdproject-422108-de24065c1d1a.json
+            project-id: talkdproject-422108
+            bucket: talkdimg
+
